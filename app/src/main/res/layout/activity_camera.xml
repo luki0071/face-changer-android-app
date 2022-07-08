@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayoutCamera"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.CameraActivity">
+
+    <com.example.kwasheniak.zmieniacztwarzy.camerasurfaces.CameraPreview
+        android:id="@+id/camera_camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.kwasheniak.zmieniacztwarzy.camerasurfaces.GraphicOverlay
+            android:id="@+id/camera_graphic_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.example.kwasheniak.zmieniacztwarzy.camerasurfaces.CameraPreview>
+
+    <LinearLayout
+        android:id="@+id/camera_linear_layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <HorizontalScrollView
+            android:id="@+id/camera_menu_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#90000000"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/camera_menu_linear_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:paddingHorizontal="3dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:background="#90000000">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/camera_button_switch_camera"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorTransparent"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/baseline_flip_camera_android_white_48dp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/camera_button_capture"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/round_camera_button" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/camera_button_stickers"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/baseline_tag_faces_white_48dp"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/camera_constraint_layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@color/colorTransparent">
+
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">ZmieniaczTwarzy</string>
+    <string name="app_name_space">Zmieniacz Twarzy</string>
+
+    <string name="button_camera">Aparat</string>
+    <string name="button_library">Biblioteka</string>
+    <string name="button_picture_editor">Edytor zdjęć</string>
+    <string name="button_masks_creator">Kreator masek</string>
+    <string name="button_delete">Usuń</string>
+    <string name="button_save">Zapisz</string>
+    <string name="button_edit">Edytuj</string>
+    <string name="button_filter">Filtry</string>
+    <string name="button_masks">Maski</string>
+    <string name="button_return">Wstecz</string>
+    <string name="button_add_image">Edytuj obraz</string>
+    <string name="button_create_mask">Stwórz maskę</string>
+
+    <string name="menu_scrollView_erase">wyczyść</string>
+    <string name="menu_scrollView_back">wstecz</string>
+    <string name="menu_scrollView_filters">filtry</string>
+    <string name="menu_scrollView_masks">maski</string>
+    <string name="menu_scrollView_eyes">oczy</string>
+    <string name="menu_scrollView_mouth">usta</string>
+    <string name="menu_scrollView_nose">nos</string>
+    <string name="menu_scrollView_head">głowa</string>
+    <string name="menu_scrollView_ears">uszy</string>
+    <string name="menu_scrollView_custom_mask">moje maski</string>
+
+    <string name="library_text_view_info">Folder jest pusty</string>
+    <string name="library_text_view_info_2">Folder nie istnieje</string>
+
+    <string name="text_view_brush_alpha">Alpha</string>
+    <string name="text_view_brush_size">Rozmiar</string>
+
+    <string name="nothing" />
+</resources>

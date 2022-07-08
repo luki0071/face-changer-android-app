@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/editor_image_main_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.EditorActivity"
+    android:background="@color/colorYellow">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/editor_constraint_layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/colorBlack"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/editor_image_button_save"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransparent"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/baseline_save_alt_white_48dp"
+            android:tint="@color/colorYellow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/editor_image_new_project"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransparent"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/baseline_insert_drive_file_white_48dp"
+            android:tint="@color/colorYellow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/editor_constraint_layout_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editor_constraint_layout_top">
+
+        <RelativeLayout
+            android:id="@+id/editor_relative_layout_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/editor_constraint_layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:id="@+id/editor_button_filter"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent">
+
+                <ImageView
+                    android:id="@+id/editor_image_filter_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitCenter"
+                    android:padding="10dp"
+                    android:src="@drawable/baseline_filter_white_48dp"
+                    android:tint="@color/colorYellow" />
+
+                <TextView
+                    android:id="@+id/editor_image_filter_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorYellow"
+                    android:text="Filtry"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/editor_button_brush"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent">
+
+                <ImageView
+                    android:id="@+id/editor_image_brush_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitCenter"
+                    android:padding="10dp"
+                    android:src="@drawable/baseline_brush_white_48dp"
+                    android:tint="@color/colorYellow" />
+
+                <TextView
+                    android:id="@+id/editor_image_brush_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorYellow"
+                    android:text="Pędzel"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/editor_button_eraser"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent">
+
+                <ImageView
+                    android:id="@+id/editor_image_eraser_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitCenter"
+                    android:padding="10dp"
+                    android:src="@drawable/icon_erase"
+                    android:tint="@color/colorYellow" />
+
+                <TextView
+                    android:id="@+id/editor_image_eraser_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorYellow"
+                    android:text="Gumka"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/editor_button_add_image"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent">
+
+                <ImageView
+                    android:id="@+id/editor_image_add_image_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitCenter"
+                    android:padding="10dp"
+                    android:src="@drawable/baseline_add_photo_alternate_white_48dp"
+                    android:tint="@color/colorYellow" />
+
+                <TextView
+                    android:id="@+id/editor_image_add_image_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorYellow"
+                    android:text="Dodaj zdjęcie"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/editor_option_menu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/editor_button_quit_menu"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorTransparent"
+                android:scaleType="fitCenter"
+                android:padding="@dimen/dim10dp"
+                android:src="@drawable/baseline_clear_white_48dp"
+                android:tint="@color/colorYellow"/>
+
+            <ImageButton
+                android:id="@+id/editor_button_add_image_option_menu"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorTransparent"
+                android:scaleType="fitCenter"
+                android:padding="@dimen/dim10dp"
+                android:src="@drawable/baseline_add_black_48dp"
+                android:tint="@color/colorYellow"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/editor_button_add_image_on_top_bottom_layout"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/editor_button_add_image_on_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTransparent"
+                    android:scaleType="fitCenter"
+                    android:padding="@dimen/dim10dp"
+                    android:src="@drawable/round_vertical_align_top_white_48dp"
+                    android:tint="@color/colorYellow"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/editor_button_add_image_on_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTransparent"
+                    android:scaleType="fitCenter"
+                    android:padding="@dimen/dim10dp"
+                    android:src="@drawable/round_vertical_align_bottom_white_48dp"
+                    android:tint="@color/colorYellow"
+                    android:layout_weight="1" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/editor_seek_bars_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlack"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/text_view_brush_size"
+                        android:textColor="@color/colorWhite"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/editor_seek_bar_brush_alpha_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/text_view_brush_alpha"
+                        android:textColor="@color/colorWhite"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <SeekBar
+                        android:id="@+id/editor_seek_bar_brush_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:progressBackgroundTint="@color/colorWhite">
+                    </SeekBar>
+
+                    <SeekBar
+                        android:id="@+id/editor_seek_bar_brush_alpha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:max="255"
+                        android:progressBackgroundTint="@color/colorWhite">
+                    </SeekBar>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/editor_filter_menu_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/editor_filter_menu_linear_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
